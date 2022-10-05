@@ -51,6 +51,7 @@ public class ClienteDAO {
            statement.setString (2, direccion);
            statement.setString (3, telefono);
            statement.setString (4, email);
+           statement.execute();
            
            resultado = statement.getUpdateCount() == 1;
           
@@ -60,5 +61,21 @@ public class ClienteDAO {
       return resultado;
     
   }
-  // Hola, este es un comentario
+  
+  public static boolean verificarExistencia(String email){
+      boolean existencia = false;
+      try{
+          Connection connection = Conexion.obtener();
+          String consulta = "SELECT * FROM cliente WHERE email = ?";
+          PreparedStatement statement = connection.prepareStatement(consulta);
+          statement.setString(1, email);
+          ResultSet resulSet = statement.executeQuery();
+          
+          existencia = resulSet.next();
+      }catch(Exception ex){
+          System.out.println("Ocurrió un erro: " + ex.getMessage());
+      }
+      return existencia;
+  }
+  
 }
