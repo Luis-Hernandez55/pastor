@@ -7,12 +7,17 @@ package mx.itson.pastor.persistencia;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 /*
  * 
  *
  * @author lahg2
  */
 public class Conexion {
+    
+    public ResultSet resultado;
+    public Statement sentencia;
    
     public static Connection obtener(){
        Connection conexion = null;

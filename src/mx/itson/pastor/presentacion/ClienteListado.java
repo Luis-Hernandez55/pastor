@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package mx.itson.pastor.presentacion;
 
@@ -12,7 +11,7 @@ import mx.itson.pastor.persistencia.ClienteDAO;
 
 /**
  *
- * @author lahg2
+ * 
  */
 public class ClienteListado extends javax.swing.JFrame {
 
@@ -21,11 +20,6 @@ public class ClienteListado extends javax.swing.JFrame {
      */
     public ClienteListado() {
         initComponents();
-    }
-    
-    void MostrarTabla(){
-        DefaultTableModel modelo = new DefaultTableModel();
-        
     }
 
     /**
@@ -37,12 +31,8 @@ public class ClienteListado extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jEditorPane1 = new javax.swing.JEditorPane();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbClientes = new javax.swing.JTable();
-
-        jScrollPane2.setViewportView(jEditorPane1);
+        tblClientes = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -51,7 +41,7 @@ public class ClienteListado extends javax.swing.JFrame {
             }
         });
 
-        tbClientes.setModel(new javax.swing.table.DefaultTableModel(
+        tblClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -59,45 +49,50 @@ public class ClienteListado extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Nombre", "Dirección", "Teléfono", "Email"
+                "Nombre", "Direccion", "Telefono", "Email"
             }
         ));
-        jScrollPane1.setViewportView(tbClientes);
+        jScrollPane1.setViewportView(tblClientes);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(160, 160, 160)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addGap(52, 52, 52)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(114, 114, 114)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addGap(38, 38, 38)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        List<Cliente>clientes = ClienteDAO.obtenerTodoso();
+        // TODO add your handling code here:
         
-        DefaultTableModel modelo = (DefaultTableModel)tbClientes.getModel();
+        List<Cliente> clientes = ClienteDAO.obtenerTodoso();
+        
+        DefaultTableModel modelo = 
+                (DefaultTableModel)tblClientes.getModel();
+        
         modelo.setRowCount(0);
         
-        for (Cliente c : clientes) {
+        for(Cliente c : clientes ){
             modelo.addRow(new Object[] {
-                c.getNombre(),
-                c.getDireccion(),
-                c.getTelefono(),
-                c.getEmail()
-            });
+            c.getNombre(),
+            c.getDireccion(),
+            c.getTelefono(),
+            c.getEmail()
+        });
         }
+        
     }//GEN-LAST:event_formWindowOpened
 
     /**
@@ -136,9 +131,7 @@ public class ClienteListado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable tbClientes;
+    private javax.swing.JTable tblClientes;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package mx.itson.pastor.presentacion;
 
@@ -10,12 +9,12 @@ import mx.itson.pastor.negocio.ClienteNegocio;
 
 /**
  *
- * @author USUARIO
+ * @author jesus
  */
 public class ClienteForm extends javax.swing.JFrame {
 
     /**
-     * Creates new form ClienteForm
+     * Creates new form ClienteFrom
      */
     public ClienteForm() {
         initComponents();
@@ -30,25 +29,23 @@ public class ClienteForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        txtNombre = new javax.swing.JTextField();
         txtDireccion = new javax.swing.JTextField();
+        lblTelefono = new javax.swing.JLabel();
         txtTelefono = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
         btnGuardar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Nombre");
+        jLabel2.setText("Dirección");
 
-        jLabel2.setText("Direccion");
+        lblTelefono.setText("Teléfono");
 
-        jLabel3.setText("Telefono");
-
-        jLabel4.setText("Email");
+        jLabel4.setText("Email:");
 
         btnGuardar.setText("Guardar");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -57,51 +54,49 @@ public class ClienteForm extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("Nombre:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnGuardar)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4))
                         .addComponent(jLabel1)
-                        .addComponent(txtDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, 489, Short.MAX_VALUE)
-                        .addComponent(txtEmail)
-                        .addComponent(txtTelefono))
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(199, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnGuardar)
-                .addGap(22, 22, 22))
+                        .addComponent(txtNombre)
+                        .addComponent(jLabel2)
+                        .addComponent(txtDireccion)
+                        .addComponent(lblTelefono)
+                        .addComponent(txtTelefono)
+                        .addComponent(jLabel4)
+                        .addComponent(txtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68)
-                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(lblTelefono)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(btnGuardar)
-                .addGap(33, 33, 33))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         pack();
@@ -111,16 +106,14 @@ public class ClienteForm extends javax.swing.JFrame {
         String nombre = txtNombre.getText();
         String direccion = txtDireccion.getText();
         String telefono = txtTelefono.getText();
-        String email = txtEmail.getText();
-        
-        if (ClienteNegocio.guardar(nombre, direccion, telefono, email)){
-            //Mostrar mensaje de que se guardo
-            JOptionPane.showMessageDialog(this, "El registro se guardó correctamente", "Registro guardado", JOptionPane.INFORMATION_MESSAGE);
-        }else{
-            //Monstrar mensje de que no se guardo
-            JOptionPane.showMessageDialog(this, "No es posible guardar el cliente", "Registro no guardado", JOptionPane.ERROR_MESSAGE);
+        String email =  txtEmail.getText();
 
+        if(ClienteNegocio.guardar(nombre, direccion, telefono, email)){
+            JOptionPane.showMessageDialog(this, "El registro se guardó correctamente", "Registro guardado", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "No es posible guardar el cliente. Ya existe el correo registrado", "Registro no guardado", JOptionPane.ERROR_MESSAGE);
         }
+
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     /**
@@ -149,6 +142,7 @@ public class ClienteForm extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(ClienteForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -162,8 +156,8 @@ public class ClienteForm extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel lblTelefono;
     private javax.swing.JTextField txtDireccion;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNombre;

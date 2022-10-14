@@ -18,6 +18,7 @@ public class Cliente {
     private String direccion;
     private String telefono;
     private String email;
+    private String cuenta;
     
     /**
      * @return the id
@@ -89,5 +90,15 @@ public class Cliente {
         this.email = email;
     }
     
+    public String getCuenta() {
+        return cuenta;
+    }
+
+    /**
+     * @param cuenta the cuenta to set
+     */
+    public void setCuenta(String cuenta) {
+        this.cuenta = cuenta;
+    }
   
 }
